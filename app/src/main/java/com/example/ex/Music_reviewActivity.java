@@ -3,6 +3,8 @@ package com.example.ex;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 
 public class Music_reviewActivity extends AppCompatActivity {
 
+    static final String TAG = "생명주기 - 음악 리뷰작성 페이지 : ";
     private EditText et_title;
     private EditText et_content;
     private Button btn_register;
@@ -25,6 +28,7 @@ public class Music_reviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_review);
         //Toast.makeText(getApplicationContext(),"onCreate 호출됨",Toast.LENGTH_SHORT).show();
+        Log.e(TAG, "onCreate");
 
         et_title = findViewById(R.id.et_title);
         et_content = findViewById(R.id.et_context);
@@ -36,8 +40,8 @@ public class Music_reviewActivity extends AppCompatActivity {
 
                 title = et_title.getText().toString(); // 값 받아오기 바깥에 넣으면 초기값 받아서 안됨
                 content = et_content.getText().toString();
-                Log.i("일정 공유", "제목"+title);
-                Log.i("일정 공유", "내용"+content);
+                //Log.i("일정 공유", "제목"+title);
+                //Log.i("일정 공유", "내용"+content);
 
 
                 intent.putExtra("music_title",title); // 인텐트에 데이터 적재
@@ -50,13 +54,14 @@ public class Music_reviewActivity extends AppCompatActivity {
     @Override
     protected void onStart() {//2
         //Toast.makeText(getApplicationContext(),"onStart 호출됨",Toast.LENGTH_SHORT).show();
+        Log.e(TAG, "onStart");
         super.onStart();
     }
 
     @Override
     protected void onPause() {//4
         //Toast.makeText(getApplicationContext(),"onPause 호출됨",Toast.LENGTH_SHORT).show();
-
+        Log.e(TAG, "onPause");
         super.onPause();
     }
 
@@ -64,6 +69,7 @@ public class Music_reviewActivity extends AppCompatActivity {
     protected void onResume() {//3
         //Toast.makeText(getApplicationContext(),"onResume 호출됨",Toast.LENGTH_SHORT).show();
         //데이터 호출
+        Log.e(TAG, "onResume");
         SharedPreferences pref = getSharedPreferences("gostop", Activity.MODE_PRIVATE); //불러올때 설정한 이름을 불러와야해
         if(pref != null){
             String music_title = pref.getString("title","");
@@ -78,12 +84,14 @@ public class Music_reviewActivity extends AppCompatActivity {
 
     @Override
     protected void onStop() {//5
+        Log.e(TAG, "onStop");
         //Toast.makeText(getApplicationContext(),"onStop 호출됨",Toast.LENGTH_SHORT).show();
         super.onStop();
     }
 
     @Override
     protected void onDestroy() {//6
+        Log.e(TAG, "onDestroy");
         //Toast.makeText(getApplicationContext(),"onDestroy 호출됨",Toast.LENGTH_SHORT).show();
         //앱이 도중에 잘못되어도 저장됨
         //데이터 저장

@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class MusicActivity extends AppCompatActivity {
 
-    static final String TAG = "생명주기 테스트 - 음악 재생 페이지 : ";
+    static final String TAG = "생명주기 - 음악 재생 페이지 : ";
 
     // MediaPlayer 객체생성
     MediaPlayer mediaPlayer;
@@ -26,6 +26,7 @@ public class MusicActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
+        Log.e(TAG, "onCreate");
 
         startButton = findViewById(R.id.start);
         stopButton = findViewById(R.id.stop);
@@ -46,6 +47,7 @@ public class MusicActivity extends AppCompatActivity {
                 // MediaPlayer 객체 할당
                 mediaPlayer = MediaPlayer.create(MusicActivity.this, R.raw.chris);
                 mediaPlayer.start();
+                //Log.e("음악", "재생");
             }
         });
 
@@ -68,42 +70,42 @@ public class MusicActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i(TAG, "onDestroy");
+        Log.e(TAG, "onDestroy");
         // MediaPlayer 해지
-        if(mediaPlayer != null) {
-            mediaPlayer.release();
-            mediaPlayer = null;
-        }
+//        if(mediaPlayer != null) {
+//            mediaPlayer.release();
+//            mediaPlayer = null;
+//        }
     }
 
     public void onStart() {
         super.onStart();
-        Log.i(TAG, "onStart");
+        Log.e(TAG, "onStart");
     }
 
     public void onResume() {
         super.onResume();
-        Log.i(TAG, "onResume");
+        Log.e(TAG, "onResume");
     }
 
     public void onPause() {
         super.onPause();
-        Log.i(TAG, "onPause");
+        Log.e(TAG, "onPause");
 
         if(mediaPlayer != null) {
             // 정지버튼
             mediaPlayer.stop();
-            Log.i("음악재생", "멈춤");
+            //Log.e("음악", "멈춤");
         }
     }
 
     public void onRestart() {
         super.onRestart();
-        Log.i(TAG, "onRestart");
+        Log.e(TAG, "onRestart");
     }
 
     public void onStop() {
         super.onStop();
-        Log.i(TAG, "onStop");
+        Log.e(TAG, "onStop");
     }
 }
