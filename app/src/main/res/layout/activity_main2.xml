@@ -47,6 +47,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="노래재생" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="리사이클러뷰 연습" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
