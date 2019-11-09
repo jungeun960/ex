@@ -32,9 +32,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
     @Override
     public void onBindViewHolder(@NonNull final MainAdapter.CustomViewHolder holder, int position) {
         // position에 해당하는 데이터를 뷰홀더의 아이템뷰에 표시.
+
         holder.iv_profile.setImageResource(arrayList.get(position).getIv_profile()); // 이미지 가져오기
         holder.tv_name.setText(arrayList.get(position).getTv_name()); // 이름 가져오기
         holder.tv_content.setText(arrayList.get(position).getTv_cotent()); // 내용 가져오기
+        holder.tv_title.setText(arrayList.get(position).getTv_cotent());
 
         holder.itemView.setTag(position);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +80,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
         protected ImageView iv_profile;
         protected TextView tv_name;
         protected TextView tv_content;
+        protected TextView tv_title;
 
         public CustomViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -85,6 +88,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
             this.iv_profile=(ImageView)itemView.findViewById(R.id.iv_profile);
             this.tv_name=(TextView)itemView.findViewById(R.id.tv_name);
             this.tv_content=(TextView)itemView.findViewById(R.id.tv_content);
+            this.tv_title=(TextView)itemView.findViewById(R.id.tv_title);
         }
     }
 }

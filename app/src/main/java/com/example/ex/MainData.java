@@ -4,14 +4,17 @@ public class MainData {
     private int iv_profile; //imageView int 임
     private String tv_name;
     private String tv_cotent;
+    private String tv_title;
 
 
 
-    public MainData(int iv_profile, String tv_name, String tv_cotent) {
+    public MainData(int iv_profile, String tv_name, String tv_cotent, String tv_title) {
         this.iv_profile = iv_profile;
         this.tv_name = tv_name;
         this.tv_cotent = tv_cotent;
+        this.tv_title = tv_title;
     }
+
 
     public int getIv_profile() {
         return iv_profile;
@@ -35,6 +38,10 @@ public class MainData {
 
     public void setTv_cotent(String tv_cotent) {
         this.tv_cotent = tv_cotent;
+    }
+
+    public String getTv_title(){
+        return tv_title;
     }
 
 

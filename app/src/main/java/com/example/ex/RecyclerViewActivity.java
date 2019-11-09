@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,15 +36,25 @@ public class RecyclerViewActivity extends AppCompatActivity {
         mainAdapter = new MainAdapter(arrayList);
         recyclerView.setAdapter(mainAdapter);
 
+        MainData mainData1 = new MainData(R.mipmap.ic_launcher, "최복치","마카롱 맛집 공유합니다.","파리 3박 4일");
+        MainData mainData2 = new MainData(R.mipmap.ic_launcher, "절미","팬션 추천받습니다","강릉 여행");
+        MainData mainData3 = new MainData(R.mipmap.ic_launcher, "마이크","엄지네 포장마차 강추","속초 맛집 추천");
+        arrayList.add(mainData1); // 내용 추가
+        arrayList.add(mainData2);
+        arrayList.add(mainData3);
+        mainAdapter.notifyDataSetChanged();
+
         Button btn_add = (Button)findViewById(R.id.btn_add);
         btn_add.setOnClickListener(new View.OnClickListener() {// 추가 버튼 클릭 시
             @Override
             public void onClick(View v) {
-                MainData mainData = new MainData(R.mipmap.ic_launcher, "홍홍","리사이클러뷰");
+                MainData mainData = new MainData(R.mipmap.ic_launcher, "홍홍","우왕","리사이클러뷰");
                 arrayList.add(mainData); // 내용 추가
                 mainAdapter.notifyDataSetChanged(); // 새로고침해 반영
             }
         });
 
     }
+
+
 }
