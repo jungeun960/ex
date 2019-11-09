@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RecyclerViewActivity"></activity>
+        <activity android:name=".RecycleView2Activity"></activity>
+        <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".Music2Activity" />
         <activity android:name=".Music_reviewActivity" />
         <activity android:name=".MusicActivity" /> <!-- 팝업 Activity -->
