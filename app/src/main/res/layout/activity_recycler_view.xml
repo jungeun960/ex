@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".RecyclerViewActivity">
 
-
+<!--recyclerview 가 표시될 위치 결정-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"

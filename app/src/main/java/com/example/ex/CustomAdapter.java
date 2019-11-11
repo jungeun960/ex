@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.CustomViewHolder> {
     // 어댑터 상속
-    private ArrayList<Dictionary> mList;
+    private ArrayList<Dictionary> mList; //dictionary 클래스의 데이터 타입을 가진 arrayList 객체 생성
     private Context mContext;
 
     // 1. 컨텍스트 메뉴를 사용하라면 RecyclerView.ViewHolder를 상속받은 클래스에서

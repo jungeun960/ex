@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class RecyclerViewActivity extends AppCompatActivity {
 
-    private ArrayList<MainData> arrayList;
+    private ArrayList<MainData> arrayList; // 어댑터에 들어갈 list
     private MainAdapter mainAdapter;
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;

@@ -1,6 +1,7 @@
 package com.example.ex;
 
 public class MainData {
+    // 아이템 데이터 클래스 정의
     private int iv_profile; //imageView int 임
     private String tv_name;
     private String tv_cotent;
@@ -8,6 +9,7 @@ public class MainData {
 
 
 
+    //생성자
     public MainData(int iv_profile, String tv_name, String tv_cotent, String tv_title) {
         this.iv_profile = iv_profile;
         this.tv_name = tv_name;
@@ -16,6 +18,7 @@ public class MainData {
     }
 
 
+    //getter, setter 생성
     public int getIv_profile() {
         return iv_profile;
     }

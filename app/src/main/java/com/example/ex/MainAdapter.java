@@ -13,7 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHolder> {
+    // 어뎁터 구현 시 필수 생성 메서드
+    //onCreateViewHolder() : 뷰홀더 객체 생성.
+    //onBindViewHolder() : 데이터를 뷰홀더에 바인딩.
+    //getItemCount() : 전체 아이템 갯수 리턴.
 
+    //어댑터에 들어갈 list
     private ArrayList<MainData> arrayList;
 
     public MainAdapter(ArrayList<MainData> arrayList){

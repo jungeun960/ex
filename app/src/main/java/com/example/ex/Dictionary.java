@@ -6,12 +6,14 @@ public class Dictionary {
     private String English;
     private String Korean;
 
+    // 생성자 메소드 생성
     public Dictionary(String id, String english, String korean) {
         this.id = id;
         English = english;
         Korean = korean;
     }
 
+    // getter, setter 메소드 생성
     public String getId() {
         return id;
     }
