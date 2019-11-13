@@ -44,6 +44,11 @@ public class RecycleView2Activity extends AppCompatActivity {
         mAdapter = new CustomAdapter(this, mArrayList);
         mRecyclerView.setAdapter(mAdapter);
 
+        Dictionary dict1 = new Dictionary("1","intent","의지, 의도");
+        Dictionary dict2 = new Dictionary("2","recycle","재활용");
+        mArrayList.add(dict1);
+        mArrayList.add(dict2);
+        mAdapter.notifyDataSetChanged();
 
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mRecyclerView.getContext(),
                 mLinearLayoutManager.getOrientation());
