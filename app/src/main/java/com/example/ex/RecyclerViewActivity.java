@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
@@ -23,6 +24,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
 
+        //toolbar = findViewById(R.id.toolBar);
         // 리사이클러뷰에 LinearLayoutManager 객체 지정.
         recyclerView = (RecyclerView)findViewById(R.id.rv);
         //수평(Horizontal) 방향으로 아이템을 배치
@@ -56,5 +58,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     }
 
+
+    public boolean onCreateOptionsMeunu(Menu menu){
+        getMenuInflater().inflate(R.menu.toolbar_menu,menu);
+        return true;
+    }
 
 }

@@ -8,6 +8,11 @@
     tools:context=".RecyclerViewActivity">
 
 <!--recyclerview 가 표시될 위치 결정-->
+    <SearchView
+        android:layout_width="390dp"
+        android:layout_height="129dp"
+        android:layout_weight="1" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"

@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHolder> {
     // 어뎁터 구현 시 필수 생성 메서드
@@ -18,8 +19,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHold
     //onBindViewHolder() : 데이터를 뷰홀더에 바인딩.
     //getItemCount() : 전체 아이템 갯수 리턴.
 
+    private List<MainData> exampleList;
     //어댑터에 들어갈 list
     private ArrayList<MainData> arrayList;
+
 
     public MainAdapter(ArrayList<MainData> arrayList){
         // 생성자에서 데이터 리스트 객체를 전달받음.
