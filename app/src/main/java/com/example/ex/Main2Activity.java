@@ -98,6 +98,15 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent6);
             }
         });
+
+        Button button9 = (Button)findViewById(R.id.button9);
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent7 = new Intent(getApplicationContext(),Shared1Activity.class);
+                startActivity(intent7);
+            }
+        });
     }
 
     void show()

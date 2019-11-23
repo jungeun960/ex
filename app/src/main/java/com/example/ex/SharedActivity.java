@@ -18,6 +18,7 @@ public class SharedActivity extends AppCompatActivity {
 
         et_save = (EditText)findViewById(R.id.et_save);
 
+        // 불러오기
         SharedPreferences sharedPreferences = getSharedPreferences(shared,0);
         String value = sharedPreferences.getString("hong",""); // 꺼내오는 것이기 때문에 빈칸
         et_save.setText(value);

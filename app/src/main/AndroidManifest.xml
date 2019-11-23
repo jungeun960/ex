@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SharedActivity"></activity>
+        <activity android:name=".ExampleItem"></activity>
+        <activity android:name=".Shared1Activity" />
+        <activity android:name=".SharedActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".RecycleView2Activity" />
         <activity android:name=".RecyclerViewActivity" />
