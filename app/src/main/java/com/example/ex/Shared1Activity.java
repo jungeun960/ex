@@ -33,14 +33,7 @@ public class Shared1Activity extends AppCompatActivity {
 
     }
 
-    private void saveData() { // 데이터 저장하기
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(mExampleList); // 리스트 객체를 json으로 변형
-        editor.putString("task list", json);
-        editor.apply();
-    }
+
 
     private void loadData() { // 데이터 들고오기 oncreate에 선언 mExampleList = new ArrayList<>(); 지우고
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
@@ -71,14 +64,20 @@ public class Shared1Activity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText line1 = findViewById(R.id.edittext_line_1);
                 EditText line2 = findViewById(R.id.edittext_line_2);
-                insertItem(line1.getText().toString(), line2.getText().toString());
-                saveData();
+                String a = line1.getText().toString();
+                String b = line2.getText().toString();
+                mExampleList.add(new ExampleItem(a,b));
+                mAdapter.notifyItemInserted(mExampleList.size());
+
+                // 데이터 저장하기
+                SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                Gson gson = new Gson();
+                String json = gson.toJson(mExampleList); // 리스트 객체를 json으로 변형
+                editor.putString("task list", json);
+                editor.apply();
             }
         });
     }
 
-    private void insertItem(String line1, String line2) {
-        mExampleList.add(new ExampleItem(line1, line2));
-        mAdapter.notifyItemInserted(mExampleList.size());
-    }
 }

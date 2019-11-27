@@ -107,6 +107,16 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent7);
             }
         });
+
+        Button button10 = (Button)findViewById(R.id.button10);
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent8 = new Intent(getApplicationContext(),GetImageActivity.class);
+                startActivity(intent8);
+            }
+        });
+
     }
 
     void show()

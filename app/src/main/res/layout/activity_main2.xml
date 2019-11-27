@@ -72,6 +72,12 @@
             android:layout_height="wrap_content"
             android:text="arrayList shared" />
 
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카메라" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
