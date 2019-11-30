@@ -31,33 +31,16 @@ public class Main2Activity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(),IntentActivity.class);
                 startActivity(intent);
             }
         });
 
-        Button button1 = (Button)findViewById(R.id.button4);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1 = new Intent(getApplicationContext(),Plan1Activity.class);
-                startActivity(intent1);
-            }
-        });
-
-        Button button3 = (Button)findViewById(R.id.button);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                show();
-            }
-        });
-
-        Button button4 = (Button)findViewById(R.id.button2);
+        Button button4 = (Button)findViewById(R.id.button);
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(),PopupActivity.class);
+                Intent intent2 = new Intent(getApplicationContext(),DialogActivity.class);
                 startActivity(intent2);
             }
         });
@@ -76,19 +59,11 @@ public class Main2Activity extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent4 = new Intent(getApplicationContext(),RecyclerViewActivity.class);
+                Intent intent4 = new Intent(getApplicationContext(),reActivity.class);
                 startActivity(intent4);
             }
         });
 
-        Button button7 = (Button)findViewById(R.id.button7);
-        button7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent5 = new Intent(getApplicationContext(),RecycleView2Activity.class);
-                startActivity(intent5);
-            }
-        });
 
         Button button8 = (Button)findViewById(R.id.button8);
         button8.setOnClickListener(new View.OnClickListener() {
@@ -117,26 +92,6 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
-    }
-
-    void show()
-    {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("AlertDialog 생명주기 확인하기");
-        builder.setMessage("OnPause()가 될까요");
-        builder.setPositiveButton("예",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(),"예를 선택했습니다.",Toast.LENGTH_LONG).show();
-                    }
-                });
-        builder.setNegativeButton("아니오",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(getApplicationContext(),"아니오를 선택했습니다.",Toast.LENGTH_LONG).show();
-                    }
-                });
-        builder.show();
     }
 
 

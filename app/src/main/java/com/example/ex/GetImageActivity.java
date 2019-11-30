@@ -31,7 +31,7 @@ import java.util.Date;
 
 public class GetImageActivity extends AppCompatActivity {
 
-    private static final String TAG = "blackjin";
+    private static final String TAG = "Photo";
     private Boolean isPermission = true;
     private static final int PICK_FROM_ALBUM = 1;
     private File tempFile;

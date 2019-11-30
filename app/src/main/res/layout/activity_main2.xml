@@ -15,19 +15,7 @@
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="암시적 인텐트" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="명시적 인텐트" />
-
-<!--        <Button-->
-<!--            android:id="@+id/button5"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="양방향 액티비티" />-->
+            android:text="인텐트" />
 
         <Button
             android:id="@+id/button"
@@ -35,12 +23,6 @@
             android:layout_height="wrap_content"
             android:text="dialog 띄우기" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="액티비티 팝업으로 띄우기"
-             />
 
         <Button
             android:id="@+id/button6"
@@ -52,13 +34,7 @@
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="리사이클러뷰 연습" />
-
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="단어장 만들기" />
+            android:text="리사이클러뷰" />
 
         <Button
             android:id="@+id/button8"
