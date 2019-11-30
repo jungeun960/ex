@@ -84,10 +84,28 @@ public class Main2Activity extends AppCompatActivity {
         });
 
         Button button10 = (Button)findViewById(R.id.button10);
-        button9.setOnClickListener(new View.OnClickListener() {
+        button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent8 = new Intent(getApplicationContext(),GetImageActivity.class);
+                startActivity(intent8);
+            }
+        });
+
+        Button button11 = (Button)findViewById(R.id.button11);
+        button11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent8 = new Intent(getApplicationContext(),NaverActivity.class);
+                startActivity(intent8);
+            }
+        });
+
+        Button button12 = (Button)findViewById(R.id.button12);
+        button12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent8 = new Intent(getApplicationContext(),CrawlingActivity.class);
                 startActivity(intent8);
             }
         });
