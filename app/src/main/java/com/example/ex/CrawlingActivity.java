@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -30,6 +31,8 @@ public class CrawlingActivity extends AppCompatActivity {
     private int i =0;
 
     int cnt=0;
+
+    private ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

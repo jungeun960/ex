@@ -96,20 +96,19 @@ public class Main2Activity extends AppCompatActivity {
         button11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent8 = new Intent(getApplicationContext(),NaverActivity.class);
+                Intent intent8 = new Intent(getApplicationContext(),CrawActivity.class);
                 startActivity(intent8);
             }
         });
-
-        Button button12 = (Button)findViewById(R.id.button12);
-        button12.setOnClickListener(new View.OnClickListener() {
+        
+        Button button13 = (Button)findViewById(R.id.button13);
+        button13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent8 = new Intent(getApplicationContext(),CrawlingActivity.class);
+                Intent intent8 = new Intent(getApplicationContext(),WeatherActivity.class);
                 startActivity(intent8);
             }
         });
-
     }
 
 

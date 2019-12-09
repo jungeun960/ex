@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,15 +11,23 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="d"
         android:id="@+id/textView"
         android:maxLines = "100"
         android:scrollbars = "vertical"
         android:layout_above="@+id/button" />
 
-<!--    <Button-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+
+    <!--    <Button-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:text="데이터 가져오기"-->

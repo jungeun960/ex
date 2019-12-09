@@ -58,13 +58,13 @@
             android:id="@+id/button11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="네이버 실검 크롤링" />
+            android:text="크롤링" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/button13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="크롤링" />
+            android:text="날씨" />
 
     </LinearLayout>
 
