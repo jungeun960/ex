@@ -100,12 +100,21 @@ public class Main2Activity extends AppCompatActivity {
                 startActivity(intent8);
             }
         });
-        
+
         Button button13 = (Button)findViewById(R.id.button13);
         button13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent8 = new Intent(getApplicationContext(),WeatherActivity.class);
+                startActivity(intent8);
+            }
+        });
+
+        Button button14 = (Button)findViewById(R.id.button14);
+        button14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent8 = new Intent(getApplicationContext(),Main3Activity.class);
                 startActivity(intent8);
             }
         });
